@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "author": "L.J.Zhang <longjia3713@163.com>",
+  "scripts": {
+    "build": "max build",
+    "dev": "max dev",
+    "format": "prettier --cache --write .",
+    "postinstall": "max setup",
+    "prepare": "husky",
+    "server": "cd server/hsbcInterview && uvicorn main:app --reload",
+    "setup": "max setup",
+    "start": "concurrently --kill-others-on-fail \"npm run dev\" \"npm run server\""
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@ant-design/pro-components": "^2.4.4",
+    "@umijs/max": "^4.1.10",
+    "ahooks": "^3.7.11",
+    "antd": "^5.4.0",
+    "dayjs": "^1.11.11",
+    "echarts": "^5.5.0",
+    "event-source-polyfill": "^1.0.31",
+    "highlight.js": "^11.9.0",
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.1.0",
+    "react-number-format": "^5.3.4"
+  },
+  "devDependencies": {
+    "@types/event-source-polyfill": "^1.0.5",
+    "@types/lodash": "^4.17.1",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "concurrently": "^8.2.2",
+    "husky": "^9",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^5.0.3"
+  }
+}

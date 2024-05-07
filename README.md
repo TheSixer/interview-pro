@@ -15,6 +15,7 @@ To download Python, head to the [official Python website](https://www.python.org
 
 ```bash
 git clone https://github.com/TheSixer/interview-pro.git
+
 cd interview-pro
 ```
 
@@ -25,15 +26,15 @@ pnpm install
 ```
 
 3. Installation back-end dependence.
-   The directory for the backend service is `server/hsbcInterview`
-
-  Set up a virtual environment (optional)
+   The directory for the backend service is `server/hsbcInterview`, Set up a virtual environment (optional)
 
 ```bash
 cd server/hsbcInterview
 python -m venv .venv
+
 # windows
 .venv\Scripts\activate
+
 # Linux/MacOS
 source .venv/bin/activate
 ```
@@ -56,6 +57,7 @@ npm run start
 
 ```py server/.env
 # .env
+
 OPENAI_API_KEY=test_key
 ```
 

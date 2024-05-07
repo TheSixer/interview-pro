@@ -3,7 +3,7 @@ import { Skeleton } from 'antd';
 
 const BasicInfo = ({ info }: any) => {
   if (!info) {
-    return <Skeleton active title={false} paragraph={{ rows: 3 }} />;
+    return <Skeleton active paragraph={{ rows: 3 }} />;
   }
 
   const items: DescriptionsProps['items'] = [];
@@ -21,7 +21,10 @@ const BasicInfo = ({ info }: any) => {
 
   return (
     <div>
-      <p>{info?.longBusinessSummary || 'No long business summary'}</p>
+      <h4>Business Summary:</h4>
+      <p style={{ lineHeight: 2.0 }}>
+        {info?.longBusinessSummary || 'No long business summary'}
+      </p>
     </div>
   );
 };

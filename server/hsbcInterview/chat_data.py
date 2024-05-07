@@ -33,12 +33,12 @@ def generate_stream(question: str):
         messages=[{"role": "user", "content": question}],
         stream=True,
     )
-
+    print(stream)
     for chunk in stream:
         if chunk.choices[0].delta.content is not None:
             data = json.dumps({"messageType": "TEXT", "message": chunk.choices[0].delta.content})
             yield f"data: {data}\n\n"
-            time.sleep(0.5)
+            # time.sleep(0.5)
 
     # 发送结束标记
     end_message = json.dumps({"end": True})

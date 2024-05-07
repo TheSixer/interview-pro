@@ -19,12 +19,12 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      redirect: '/home',
+      redirect: '/Chat',
     },
     {
       name: '首页',
       path: '/home',
-      component: './Home',
+      component: './Chat',
     },
     {
       name: 'Funds',
@@ -36,11 +36,6 @@ export default defineConfig({
       path: '/fund/:symbol',
       component: './FundDetail',
       hideInMenu: true,
-    },
-    {
-      name: 'ChatAI',
-      path: '/chat',
-      component: './Chat',
     },
     {
       name: 'SymbolDetail',

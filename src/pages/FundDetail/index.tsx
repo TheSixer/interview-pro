@@ -29,8 +29,8 @@ const FundDetail: React.FC<unknown> = () => {
         },
       },
       title: {
-        left: 'center',
-        text: 'Large Ara Chart',
+        left: 'left',
+        text: basicInfo?.info?.longName || symbol?.toLocaleUpperCase(),
       },
       toolbox: {
         feature: {
@@ -181,6 +181,7 @@ const FundDetail: React.FC<unknown> = () => {
 
       <OtherInfo info={{ ...(basicInfo?.info || {}) }} />
 
+      <h3>Related News</h3>
       <News data={basicInfo?.news || []} />
     </PageContainer>
   );

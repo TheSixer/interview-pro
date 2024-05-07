@@ -1,4 +1,8 @@
-import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
+import {
+  CopyOutlined,
+  FieldTimeOutlined,
+  LinkOutlined,
+} from '@ant-design/icons';
 import { Button, Flex, List, Space } from 'antd';
 import dayjs from 'dayjs';
 import React from 'react';
@@ -37,17 +41,17 @@ const News: React.FC<NewsProps> = ({ data }) => (
         key={item.title}
         actions={[
           <IconText
-            icon={StarOutlined}
+            icon={LinkOutlined}
             text={`Publisher: ${item.publisher}`}
             key="list-vertical-star-o"
           />,
           <IconText
-            icon={LikeOutlined}
+            icon={CopyOutlined}
             text={`Type: ${item.type}`}
             key="list-vertical-like-o"
           />,
           <IconText
-            icon={MessageOutlined}
+            icon={FieldTimeOutlined}
             key="list-vertical-like-d"
             text={`Date: ${dayjs(item.providerPublishTime * 1000).format(
               'YYYY-MM-DD HH:mm:ss',

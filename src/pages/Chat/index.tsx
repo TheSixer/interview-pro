@@ -1,4 +1,4 @@
-import { Avatar, Input, List } from 'antd';
+import { Avatar, Input, List, Skeleton } from 'antd';
 import { EventSourcePolyfill } from 'event-source-polyfill';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/monokai-sublime.css';
@@ -18,7 +18,7 @@ const Chat = () => {
   const [questions, setQuestions] = useState<string[]>([]);
   const [messageList, setMessageList] = useState<any>([]);
   const [value, setValue] = useState('');
-  // const [isLoading, setLoding] = useState(false);
+  const [isLoading, setIsLoding] = useState(false);
   const index = useRef(0);
 
   const chat = useRef<any>(null);
@@ -32,10 +32,10 @@ const Chat = () => {
   };
 
   const submit = async () => {
-    // if (isLoading) {
-    //   return
-    // }
-    // setLoding(true)
+    if (isLoading) {
+      return;
+    }
+    setIsLoding(true);
     setQuestions([...questions, value.trim()]);
     setValue('');
     scrollToBottom();
@@ -49,13 +49,12 @@ const Chat = () => {
 
     evtSource.onmessage = function (e: any) {
       try {
-        console.log(e.data);
         const data = JSON.parse(e.data);
+        setIsLoding(false);
 
         if (data.end) {
           index.current += 1;
           evtSource.close();
-          // setLoding(false)
         }
 
         if (!data.message) {
@@ -99,6 +98,10 @@ const Chat = () => {
                     description={question}
                   />
                 </List.Item>
+
+                {isLoading ? (
+                  <Skeleton avatar active paragraph={{ rows: 3 }} />
+                ) : null}
 
                 {messageList[index] ? (
                   <List.Item>

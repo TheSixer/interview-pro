@@ -1,10 +1,9 @@
 # README
 
-### Basic Summary
+## Basic Summary
 
 This is a simple project prepared for the HSBC interview test. It adopts the form of front-end and back-end separation. The front-end uses the React framework and is built based on UmiJS. The back-end service is implemented in Python.
 
-### Installation from sources
 
 ## Install Python
 To run this project, you will need to ensure you have Python installed. 
@@ -38,7 +37,7 @@ python -m venv .venv
 # Linux/MacOS
 source .venv/bin/activate
 ```
-4. With the virtual environment activated, use `pip` to install all dependencies listed in `requirements.txt`:
+4. With the virtual environment activated, use ` pip ` to install all dependencies listed in ` requirements.txt `:
 
 ```bash
 pip install -r requirements.txt
@@ -53,7 +52,7 @@ npm run start
 
 ## OPENAI_API_KEY
 
-`OPENAI_API_KEY` is required to use the ChatGPT conversation function. Unfortunately, I cannot provide the real key. If you want to test the conversation function, you can add `OPENAI_API_KEY` to `server/.env`.
+` OPENAI_API_KEY ` is required to use the ChatGPT conversation function. Unfortunately, I cannot provide the real key. If you want to test the conversation function, you can add `OPENAI_API_KEY` to ` server/hsbcInterview/.env `.
 
 ```py server/.env
 # .env

@@ -61,10 +61,14 @@ npm run start
 OPENAI_API_KEY=test_key
 ```
 
-## ScreenShot
+## ScreenShots
 
 ![Chat Page](./screenshot01.jpg)
 
 ![Fund List Page](./screenshot02.jpg)
 
 ![Fund Detail Page](./screenshot03.jpg)
+
+![Fund Detail Page](./screenshot04.jpg)
+
+![Fund Detail Page](./screenshot05.jpg)

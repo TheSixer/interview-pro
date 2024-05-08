@@ -99,7 +99,7 @@ const Chat = () => {
                   />
                 </List.Item>
 
-                {isLoading ? (
+                {isLoading && index === questions?.length - 1 ? (
                   <Skeleton avatar active paragraph={{ rows: 3 }} />
                 ) : null}
 

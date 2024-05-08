@@ -19,7 +19,7 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      redirect: '/Chat',
+      redirect: '/home',
     },
     {
       name: '首页',
